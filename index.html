@@ -3,270 +3,488 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Havy Cars</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/css/bootstrap.min.css" rel="stylesheet" >
     <link rel="stylesheet" href="style.css">
-    <title>WEBSITE.H</title>
+
+    
 </head>
 <body>
 
-<!--Header-->
-<section id="header">
-    <div class="header container">
-    <div class="nav-bar">
-        <div class="brand">
-            <a href="#hero"><h1><span>H</span>A<span>V</span>Y</h1></a>
-        </div>
-        <div class="nav-list">
-            <div class="hamburger"><div class="bar"></div></div>
-            <ul>
-                <li><a href="#hero" data-after="Home">Home</a></li>
-                <li><a href="#services" data-after="Services">Services</a></li>
-                <li><a href="#projects" data-after="Projects">Projects</a></li>
-                <li><a href="#about" data-after="About">About</a></li>
-                <li><a href="#contact" data-after="Contact">Contact</a></li>
-            </ul>
-        </div>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
+  <div class="container">
+    
+
+<a class="navbar-brand" href="#"><span class="text-warning" style="color: #fe6a495e;">Havy</span>Elite</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+        
+        <li class="nav-item">
+          <a class="nav-link" href="#Home">Home</a>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link" href="#about">About</a>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link" href="#cars">Cars</a>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link" href="#branches">Branches</a>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link" href="#contact">Contact</a>
+        </li>
+        
+        
+      </ul>
+      
     </div>
+  </div>
+</nav>
+
+
+<div id="carouselExampleDark" class="carousel slide">
+  <div class="carousel-indicators">
+    <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+    <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="1" aria-label="Slide 2"></button>
+    <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="2" aria-label="Slide 3"></button>
+    
+  </div>
+  <div class="carousel-inner" id="Home">
+    <div class="carousel-item active c-item" data-bs-interval="10000">
+      <img src="images/real pink fairy.jpg" class="d-block w-100 c-img" alt="...">
+      <div class="carousel-caption ">
+        <h5>ROYALTY</h5>
+        <p>Every Drive Deserves a Royal Finish.</p>
+        <button type="button" class="btn btn-warning mt-3" data-bs-toggle="modal" data-bs-target="#purchaseModal">Purchase Now</button>
+      </div>
     </div>
+    <div class="carousel-item c-item">
+      <img src="images/real purple.jpg" class="d-block w-100 c-img" alt="...">
+      <div class="carousel-caption">
+        <h5>Freedom</h5>
+        <p>Where will your next ride take you?</p>
+        <button type="button" class="btn btn-warning mt-3" data-bs-toggle="modal" data-bs-target="#purchaseModal">Purchase Now</button>
+      </div>
+    </div>
+    <div class="carousel-item c-item" data-bs-interval="2000">
+      <img src="images/real pink tesla.jpg" class="d-block w-100 c-img" alt="...">
+      <div class="carousel-caption ">
+        <h5>LUXURY</h5>
+        <p>Drive elegance. Own excellence.</p>
+        <button type="button" class="btn btn-warning mt-3" data-bs-toggle="modal" data-bs-target="#purchaseModal">Purchase Now</button>
+      </div>
+    </div>
+  </div>
+  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Previous</span>
+  </button>
+  <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Next</span>
+  </button>
+</div>
+
+<div class="modal fade" id="purchaseModal" tabindex="-1" aria-labelledby="purchaseModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5" id="purchaseModalLabel">TO PURCHASE</h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <form>
+          <div class="mb-3">
+            <label for="recipient-name" class="col-form-label">E-mail</label>
+            <input type="email" class="form-control" id="recipient-name">
+          </div>
+          <div class="mb-3">
+            <label for="payment-mode" class="col-form-label">Payment Mode</label>
+            <select class="form-select" id="payment-mode" aria-label="Select Payment Mode">
+              <option selected>Select your payment method</option>
+              <option value="credit_card">Credit Card</option>
+              <option value="bank_transfer">Bank Transfer</option>
+              <option value="mobile_money">Mobile Money</option>
+              <option value="cryptocurrency">Cryptocurrency</option>
+            </select>
+          </div>
+        </form>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary">Submit Purchase</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+
+
+<!--about section-->
+
+
+<section id="about" class="about section-padding">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-4 col-md-12 col-12">
+        <div class="about-image">
+          <img src="images/SUV LAMBO.jpg" alt="" class="img-fluid">
+        </div>
+      </div>
+      <div class="col-lg-8 col-md-12 col-12 ps-lg-5 mt-md-5">
+        <div class="about-text">
+          <h2>We Provide Best Quality<br>Drive with Distinction</h2>
+          <p>At HavyElite, we don't just sell cars we deliver prestige on four wheels. 
+            Founded on excellence and powered by trust, our brand exists for those who believe that every journey should feel like a royal procession.
+
+          From luxury sedans to performance-driven SUVs, each vehicle in our elite collection is carefully selected to reflect class, comfort, 
+          and commanding presence. Whether you're buying, financing, or trading in, we provide a seamless experience where your satisfaction takes the throne.</p>
+          <a href="#" class="btn btn-warning">Learn More</a>
+        </div>
+      </div>
+    </div>
+  </div>
 </section>
 
-    <!--End Header-->
+<!-- cars1 -->
 
-   <!-- Hero Section -->  
-    <section id="hero">
-        <div class="hero container">
-            <div>
-                <h1>Hello <span></span></h1>
-                <h1>My Name Is <span></span></h1>
-                <h1>Favour <span></span></h1>
-                <a href="#projects" type="button" class="cta">portfolio</a>
+<!-- cars2 -->
+ <section id="cars" class="about section-padding">
+ <div class="container">
+   <h3 class="text-center mb-4">CARS</h3> <div class="row g-4"></div>
+  <div class="row" style="margin-top: 100px;">
+     <div class="col-md-4 py-3 py-md-0">
+      <div class="card" id="tpc">
+        <img src="images/lexus.jpg" alt="" class="card image-top">
+        <div class="card-img-overlay">
+          <h4 class="card-title">LEXUS</h4>
+          <p class="card-text">An Elegant and Comfortable Car</p>
+          <div id="btn2"><button>PURCHASE</button></div>
+        </div>
+      </div>
+     </div>
+<div class="col-md-4 py-3 py-md-0">
+      <div class="card" id="tpc">
+        <img src="images/benz.jpg" alt="" class="card image-top">
+        <div class="card-img-overlay">
+          <h4 class="card-title">MERCEDES BENZ</h4>
+          <p class="card-text">Radiation and fantastic</p>
+          <div id="btn2"><button>PURCHASE</button></div>
+        </div>
+      </div>
+     </div>
+     <div class="col-md-4 py-3 py-md-0">
+      <div class="card" id="tpc">
+        <img src="images/MASERATI.jpg" alt="" class="card image-top">
+        <div class="card-img-overlay">
+          <h4 class="card-title">MASERATI</h4>
+          <p class="card-text">Classy And Royal</p>
+          <div id="btn2"><button>PURCHASE</button></div>
+        </div>
+      </div>
+     </div>
+     <div class="col-md-4 py-3 py-md-0">
+      <div class="card" id="tpc">
+        <img src="images/nice one.jpg" alt="" class="card image-top">
+        <div class="card-img-overlay">
+          <h4 class="card-title">SHARP</h4>
+          <p class="card-text">Royal And Sharp</p>
+          <div id="btn2"><button>PURCHASE</button></div>
+        </div>
+      </div>
+     </div>
+     <div class="col-md-4 py-3 py-md-0">
+      <div class="card" id="tpc">
+        <img src="images/NICE BLACK.jpg" alt="" class="card image-top">
+        <div class="card-img-overlay">
+          <h4 class="card-title">NICE BLACK</h4>
+          <p class="card-text">Classy And Beautiful</p>
+          <div id="btn2"><button>PURCHASE</button></div>
+        </div>
+      </div>
+     </div>
+     <div class="col-md-4 py-3 py-md-0">
+      <div class="card" id="tpc">
+        <img src="images/BLACK.jpg" alt="" class="card image-top">
+        <div class="card-img-overlay">
+          <h4 class="card-title">BLACK</h4>
+          <p class="card-text">Black And Classy</p>
+          <div id="btn2"><button>PURCHASE</button></div>
+        </div>
+      </div>
+     </div>
+     
+     
+     
+
+
+  </div>
+ </div>
+ </section>
+
+<!-- cars2 -->
+
+<!-- cars3 -->
+
+  
+
+<div class="container py-5">
+   <h3 class="text-center mb-4">SALES</h3> <div class="row g-4">
+   <div class="col-md-3 py-3 py-md-0">
+            <div class="card"> <img src="./images/card 1.jpg" alt="A sleek modern car" class="card-img-top">
+                <div class="card-body">
+                    <h3 class="card-title text-center">Nice car</h3>
+                    <p class="card-text text-center">$200m</p>
+                    <a href="#" class="btn btn-primary d-block mx-auto mt-2" data-bs-toggle="modal" data-bs-target="#purchaseModal">GET IT</a>
+                </div>
             </div>
         </div>
-    </section>
-   <!-- End Hero Section -->
 
-   <!-- Service Section -->
-    <section id="services">
-        <div class="service container">
-            <div class="service-top">
-                <h1 class="section-title">Serv<span>i</span>ces</h1>
-                <p>As a passionate web developer, I turn creative concepts into functional, high-performing websites<br/> that make an impact. Whether you're starting from scratch or need improvements on an existing site, <br/>I deliver code, and modern design that meets your goals.
-                </p>
-            </div>
-            <div class="service-bottom">
-                <div class="service-item">
-                    <div class="icon"><img src="use this.jpg"></div>
-                    <h2>Web Design</h2>
-                    <p>Your website is more than just a digital space  it's your first impression. I design modern, user-focused websites that reflect your brand, engage your audience, and drive real results. Every project is built with purpose, creativity, to detail.</p>
+        <div class="col-md-3 py-3 py-md-0">
+            <div class="card">
+                <img src="./images/TESLA.jpg" alt="Tesla electric car" class="card-img-top">
+                <div class="card-body">
+                    <h3 class="card-title text-center">TESLA</h3>
+                    <p class="card-text text-center">$900m</p>
+                    <a href="#" class="btn btn-primary d-block mx-auto mt-2" data-bs-toggle="modal" data-bs-target="#purchaseModal">GET IT</a>
                 </div>
-
-                <div class="service-item">
-                    <div class="icon"><img src="use this.jpg"></div>
-                    <h2>Web Development</h2>
-                    <p>I build modern, high-quality websites that are functional, scalable, and easy to maintain.<br/> Whether it's a landing page or a full web application, I use clean, well-structured code to bring your ideas to life. </p>
-                </div>
-
-                <div class="service-item">
-                    <div class="icon"><img src="use this.jpg"></div>
-                    <h2>Software Development</h2>
-                    <p>Custom desktop, mobile, and web applications tailored to your specific needs. We design, build,<br/> test, and deploy reliable software solutions that solve real-world problems.
-
-                    </p>
-                </div>
-
-                <div class="service-item">
-                    <div class="icon"><img src="use this.jpg"></div>
-                    <h2>UX Design</h2>
-                    <p>I prioritize user journeys by creating intuitive navigation, logical structure, <br/>dand seamless interactions — ensuring your visitors have a smooth, frustration-free experience.
-
-
-
-                    </p>
-                </div>
-
             </div>
         </div>
-    </section>
-    <!-- End Service Section -->
 
-    <!--Projects Section-->
-    <section id="projects">
-        <div class="projects container">
-            <div class="projects-header">
-                <h1 class="section-title">Recent <span>Projects</span></h1>
-            </div>
-
-            <div class="all-projects">
-                <div class="project-item">
-                    <div class="project-info">
-                        <h1>Project 1</h1>
-                        <h2>Coding is inspiring</h2>
-                        <p>This project explores the motivational side of programming by sharing stories quotes, and 
-                            <br/>tools that encourage learners and developers. Built to celebrate the creative and
-                            <br/> empowering nature of code, it's a space where inspiration meets innovation.</p>
-                    </div>
-
-                    <div class="project-img">
-                        <img src="Reading vibes 😮_💨.jpg" alt="img">
-                    </div>
-                
+        <div class="col-md-3 py-3 py-md-0">
+            <div class="card">
+                <img src="./images/FORD.jpg" alt="Ford Mustang" class="card-img-top">
+                <div class="card-body">
+                    <h3 class="card-title text-center">FORD</h3>
+                    <p class="card-text text-center">$500m</p>
+                    <a href="#" class="btn btn-primary d-block mx-auto mt-2" data-bs-toggle="modal" data-bs-target="#purchaseModal">GET IT</a>
                 </div>
-
-                <div class="project-item">
-                    <div class="project-info">
-                        <h1>Project 2</h1>
-                        <h2>Coding is beauty</h2>
-                             <p>This project highlights the elegance and artistry behind programming. It showcases
-                            <br/> how clean code, thoughtful design, and smart logic come together to create experiences
-                            <br/> that are not only functional but beautiful. From UI aesthetics to algorithmic finesse,
-                            <br/> Coding is Beauty celebrates the harmony of tech and creativity.
-
-                        </p>
-                    </div>
-
-                    <div class="project-img">
-                        <img src="Reading vibes 😮_💨.jpg" alt="img">
-                    </div>
-                
-                </div>
-
-                <div class="project-item">
-                    <div class="project-info">
-                        <h1>Project 3</h1>
-                        <h2>Coding is power</h2>
-                            <p>This project highlights how code can solve real problems, automate everyday tasks,
-                                <br/> and empower users through smart, impactful tools. It's a reflection of
-                                <br/> how technology becomes a force for productivity and positive change.</p>
-                    </div>
-
-                    <div class="project-img">
-                        <img src="Reading vibes 😮_💨.jpg" alt="img">
-                    </div>
-                
-                </div>
-
-                <div class="project-item">
-                    <div class="project-info">
-                        <h1>Project 4</h1>
-                        <h2>Coding is Connection</h2>
-                        <p>This project emphasizes the power of code to bring people together. From communication tools to
-                            <br/> collaborative platforms, Coding is Connection highlights how technology fosters interaction,
-                            <br/> builds communities, and connects individuals across the globe.
-
-                        </p>
-                    </div>
-
-                    <div class="project-img">
-                        <img src="Reading vibes 😮_💨.jpg" alt="img">
-                    </div>
-                
-                </div>
-
-                <div class="project-item">
-                    <div class="project-info">
-                        <h1>Project 5</h1>
-                        <h2>Coding is Trust</h2>
-                        <p>This project focuses on building secure, reliable solutions that priority privacy and data
-                            <br/> protection. Coding is Trust emphasizes how technology can create safe environments, 
-                            <br/>foster user confidence, and ensure integrity in an increasingly digital world.
-
-                        </p>
-                    </div>
-
-                    <div class="project-img">
-                        <img src="Reading vibes 😮_💨.jpg" alt="img">
-                    </div>
-                
-                </div>
-
             </div>
         </div>
-    </section>
-    <!-- End Projects Section-->
 
-<!--About Section-->
-<section id="about">
-<div class="about container">
-    <div class="col-left">
-        <div class="about-img">
-            <img src="that's mee.jpeg" alt="img">
+        <div class="col-md-3 py-3 py-md-0">
+            <div class="card">
+                <img src="./images/FERRARI.jpg" alt="Red Ferrari sports car" class="card-img-top">
+                <div class="card-body">
+                    <h3 class="card-title text-center">FERRARI</h3>
+                    <p class="card-text text-center">$700m</p>
+                    <a href="#" class="btn btn-primary d-block mx-auto mt-2" data-bs-toggle="modal" data-bs-target="#purchaseModal">GET IT</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-3 py-3 py-md-0">
+            <div class="card">
+                <img src="./images/SHARP.jpg" alt="Sharp looking Lamborghini" class="card-img-top">
+                <div class="card-body">
+                    <h3 class="card-title text-center">LAMBORGHINI</h3>
+                    <p class="card-text text-center">$1b</p>
+                    <a href="#" class="btn btn-primary d-block mx-auto mt-2" data-bs-toggle="modal" data-bs-target="#purchaseModal">GET IT</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-3 py-3 py-md-0">
+            <div class="card">
+                <img src="./images/The purple smalie.jpg" alt="Purple Toyota Supra" class="card-img-top">
+                <div class="card-body">
+                    <h3 class="card-title text-center">Purple Toyota</h3>
+                    <p class="card-text text-center">$800m</p>
+                    <a href="#" class="btn btn-primary d-block mx-auto mt-2" data-bs-toggle="modal" data-bs-target="#purchaseModal">GET IT</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-3 py-3 py-md-0">
+            <div class="card">
+                <img src="./images/G-baby.jpg" alt="Mercedes G-Wagon SUV" class="card-img-top">
+                <div class="card-body">
+                    <h3 class="card-title text-center">Mercedes G-Wagon</h3>
+                    <p class="card-text text-center">$890m</p>
+                    <a href="#" class="btn btn-primary d-block mx-auto mt-2" data-bs-toggle="modal" data-bs-target="#purchaseModal">GET IT</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-3 py-3 py-md-0">
+            <div class="card">
+                <img src="./images/BMW.jpg" alt="BMW sedan" class="card-img-top">
+                <div class="card-body">
+                    <h3 class="card-title text-center">BMW sedan</h3>
+                    <p class="card-text text-center">$950m</p>
+                    <a href="#" class="btn btn-primary d-block mx-auto mt-2" data-bs-toggle="modal" data-bs-target="#purchaseModal">GET IT</a>
+                </div>
+            </div>
         </div>
     </div>
-    <div class="col-right">
-        <h1 class="section-title">About <span>Me</span></h1>
-        <h2>Full Stack Developer</h2>
-        <p>Hi, I'm Favour Samuel,
-            <br/> a passionate Full Stack Developer with a strong foundation in both front-end and back-end technologies.I specialize
-             <br/>in building end-to-end web applications that are fast, secure, and scalable from clean, responsive interfaces to powerful server-side logic.</p>
-             <a href="#" class="cta">Download Resume</a>
+</div>
+
+
+</div>
+  <!-- cars3 -->
+   <h1 class="text-center mb-4">AVAILABLE CARS </h1>
+<ol class="list-group list-group-numbered">
+  <li class="list-group-item d-flex justify-content-between align-items-start">
+    <div class="ms-2 me-auto">
+      <div class="fw-bold">TESLA</div>
+      PURPLE
     </div>
+    <span class="badge text-bg-primary rounded-pill">3</span>
+  </li>
+  <li class="list-group-item d-flex justify-content-between align-items-start">
+    <div class="ms-2 me-auto">
+      <div class="fw-bold">BMW</div>
+      WHITE
+    </div>
+    <span class="badge text-bg-primary rounded-pill">10</span>
+  </li>
+  <li class="list-group-item d-flex justify-content-between align-items-start">
+    <div class="ms-2 me-auto">
+      <div class="fw-bold">FERRARI</div>
+      WHITE
+    </div>
+    <span class="badge text-bg-primary rounded-pill">7</span>
+  </li>
+</ol>
+
+
+  <!--Branches-->
+<section id="branches" class="branches py-5"> 
+  <div class="container"> 
+    <h1 class="text-center">Our Branches</h1>
+<p>Our Branches Headquaters</p>
+
+<div class="row">
+    <div class="branches-col">
+        <img src="images/car branch 1.jpg">
+        <div class="layer">
+            <h3>LONDON</h3>
+        </div>
+    </div>
+<div class="branches-col">
+        <img src="images/car branch 2.jpg">
+        <div class="layer">
+            <h3>NEW YORK</h3>
+        </div>
+    </div>
+    <div class="branches-col">
+        <img src="images/car branch 3.jpg">
+        <div class="layer">
+            <h3>NEW ZEALAND</h3>
+        </div>
+    </div>
+
 </div>
 </section>
-<!--End About Section-->
 
-<!--Contact Section-->
-<section id="contact">
-<div class="contact container">
-<div><h1 class="section-title">Contact <span>Info</span></h1></div>
-<div class="contact-items">
-<div class="contact-item">
-    <div class="icon"><img src="phone.png" alt="img"></div>
-    <div class="contact-info">
-        <h1>Phone</h1>
-        <h2>09055191734</h2>
-        <h2>09055191734</h2>
+
+
+<h1 class="text-center mb-4">Unveiling the Details</h1>
+<div class="accordion accordion-flush" id="accordionFlushExample">
+  <div class="accordion-item">
+    <h2 class="accordion-header">
+      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
+        How Does Our Purchase Process Work?  </button>
+    </h2>
+    <div id="flush-collapseOne" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+      <div class="accordion-body">
+        Our streamlined process guides you from initial inquiry to final delivery. We offer personalized consultations, flexible financing, and transparent documentation for a seamless acquisition experience.
+      </div>
     </div>
-</div>
+  </div>
 
-<div class="contact-item">
-    <div class="icon"><img src="email.png" alt="img"></div>
-    <div class="contact-info">
-        <h1>Email</h1>
-        <h2>samuelmiraclefavour@gmail.com</h2>
-        <h2>samuelmiraclefavour@gmail.com</h2>
+  <div class="accordion-item">
+    <h2 class="accordion-header">
+      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
+        What Makes HavyElite Different? </button>
+    </h2>
+    <div id="flush-collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+      <div class="accordion-body">
+        At HavyElite, we pride ourselves on a meticulously curated selection of luxury vehicles, unparalleled customer service, and bespoke after-sales support that truly defines automotive excellence.
+      </div>
     </div>
-</div>
+  </div>
 
-<div class="contact-item">
-    <div class="icon"><img src="address.png" alt="img"></div>
-    <div class="contact-info">
-        <h1>Address</h1>
-        <h2>Ilorin, Kwara state,Nigeria.</h2>
+  <div class="accordion-item">
+    <h2 class="accordion-header">
+      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseThree" aria-expanded="false" aria-controls="flush-collapseThree">
+        Our Commitment to Luxury Ownership </button>
+    </h2>
+    <div id="flush-collapseThree" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+      <div class="accordion-body">
+        Beyond the showroom, our philosophy centers on building lasting relationships and providing an ownership experience that consistently exceeds expectations, ensuring your complete satisfaction.
+      </div>
     </div>
+  </div>
 </div>
 
-</div>
-</div>
+<!--contact-->
+
+<section id="contact" class="contact section-padding">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <div class="section-header text-center pb-5">
+          <h2>Contact Us</h2>
+          <p>To Contact Us And Book An Appointment For Customisation</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="row m-0">
+      <div class="col-md-12 p-0 pt-4 pb-4 ">
+        <form action="#" class="bg-light p-4.m-auto">
+          <div class="row">
+          <div class="col-md-12">
+            <div class="mb-3">
+              <input type="text" class="form-control" required placeholder="Your Full Name">
+            </div>
+          </div>
+
+<div class="col-md-12">
+            <div class="mb-3">
+              <input type="email" class="form-control" required placeholder="Your Email Here">
+            </div>
+          </div>
+
+          <div class="col-md-12">
+            <div class="mb-3">
+          <textarea rows="3" required class="form-control" placeholder="Book An Appointment"></textarea>
+            </div>
+          </div>
+
+<button class="btn btn-warning btn-lg btn-block mt-3">Book Now</button>
+
+        </div>
+        </form>
+      </div>
+    </div>                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 
+  </div>
 </section>
-<!--End Contact Section-->
-
-<!--Footer-->
-<section id="footer">
-    <div class="footer container">
-        <div class="brand"><h1><span>H</span>A<span>V</span>Y</h1></div>
-        <h2>Precision in Every Pixel</h2>
-        <div class="social-icons">
-        <div class="social-item">
-            <a href="#"><img src="icons8-whatsapp-logo-48.png"></a>
-        </div>
-
-        <div class="social-item">
-            <a href="#"><img src="instagram.png"></a>
-        </div>
-
-        <div class="social-item">
-            <a href="#"><img src="linkedin.png"></a>
-        </div>
-
-        <div class="social-item">
-            <a href="#"><img src="github.png"></a>
-        </div>
-        </div>
-        <p>&copy; 2025 HAVY. All rights reserved</p>
-    </div>
-</section>
-<!--End Footer-->
-<script src="app.js" defer></script> 
 
 
+
+<!--footer-->
+
+<footer class="bg-dark p-2 text-center">
+  <div class="container">
+    <p class="text-white">All Right Reserved @HavyElite.com</p>
+  </div>
+</footer>
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/js/bootstrap.bundle.min.js"></script>
+    
 </body>
 </html>
